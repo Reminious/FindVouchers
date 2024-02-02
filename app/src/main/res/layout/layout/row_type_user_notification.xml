@@ -1,0 +1,51 @@
+<!-- notification_item.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="8dp"
+    android:background="@android:drawable/editbox_background_normal">
+
+    <!-- Icon indicating whether the notification is viewed or not -->
+    <ImageView
+        android:id="@+id/imageViewNotificationStatus"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"/>
+
+    <!-- Notification information -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Sender name -->
+        <TextView
+            android:id="@+id/textViewSenderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sender Name"
+            android:textStyle="bold"/>
+
+        <!-- Notification timestamp -->
+        <TextView
+            android:id="@+id/textViewTimestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Timestamp"/>
+
+    </LinearLayout>
+
+    <!-- Details button -->
+    <Button
+        android:id="@+id/buttonDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Details"/>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- res/layout/activity_notification.xml -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        tools:context=".NotificationActivity">
+
+        <!-- Receiver ID and Name input fields, each occupying half of the parent layout -->
+        <LinearLayout
+            android:id="@+id/linearLayoutReceiver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:background="@android:drawable/editbox_background_normal">
+
+            <!-- Receiver ID input field -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="From:"
+                    android:paddingStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/textSenderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Time"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <!-- Receiver Name input field -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:paddingStart="8dp"/>
+
+                <EditText
+                    android:id="@+id/textRecieveTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Receive Time"
+                    android:inputType="text"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Text input field, occupying half of the parent layout -->
+        <EditText
+            android:id="@+id/textViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/linearLayoutReceiver"
+            android:layout_above="@+id/buttonReturn"
+            android:layout_marginTop="8dp"
+            android:hint="notification content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:minLines="4"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Send button, positioned at the bottom-right corner -->
+        <Button
+            android:id="@+id/buttonReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Return" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
