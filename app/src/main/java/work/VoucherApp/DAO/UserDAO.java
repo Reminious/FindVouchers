@@ -54,6 +54,19 @@ public class UserDAO {
         boolean flag = false;
         try {
             String sql = "insert into user(username,password,type) values(?,?,?)";
+            String sql1 = "select * from user where username = ?";
+            if (conn != null) {
+                PreparedStatement ps1 = conn.prepareStatement(sql1);
+                if (ps1 != null) {
+                    ps1.setString(1, username);
+                    ResultSet rs = ps1.executeQuery();
+                    if (rs.next()) {
+                        conn.close();
+                        ps1.close();
+                        return flag;
+                    }
+                }
+            }
             if (conn != null) {
                 PreparedStatement ps = conn.prepareStatement(sql);
                 if (ps != null) {

@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.login);
 
         Button buttonLogin = findViewById(R.id.login_button);
+        Button buttonRegister = findViewById(R.id.register_button);
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
 
@@ -58,6 +59,13 @@ public class MainActivity extends AppCompatActivity {
                         });
                     }
                 });
+            }
+        });
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }

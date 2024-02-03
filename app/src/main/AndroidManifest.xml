@@ -53,6 +53,9 @@
         <activity
             android:name=".FavoriteActivity"
             android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
