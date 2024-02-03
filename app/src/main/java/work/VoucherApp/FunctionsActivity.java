@@ -18,7 +18,6 @@ public class FunctionsActivity extends AppCompatActivity {
         buttonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 当，启动 SearchActivity
                 Intent intent = new Intent(FunctionsActivity.this, SearchActivity.class);
                 startActivity(intent);
             }
@@ -28,7 +27,6 @@ public class FunctionsActivity extends AppCompatActivity {
         buttonProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 当，启动 SearchActivity
                 Intent intent = new Intent(FunctionsActivity.this, ManageProfileActivity.class);
                 startActivity(intent);
             }
@@ -38,7 +36,6 @@ public class FunctionsActivity extends AppCompatActivity {
         buttonFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 当，启动 SearchActivity
                 Intent intent = new Intent(FunctionsActivity.this, SubmitFeedback.class);
                 startActivity(intent);
             }
@@ -48,7 +45,6 @@ public class FunctionsActivity extends AppCompatActivity {
         buttonNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 当，启动 SearchActivity
                 Intent intent = new Intent(FunctionsActivity.this, UserNotificationActivity.class);
                 startActivity(intent);
             }
@@ -59,7 +55,6 @@ public class FunctionsActivity extends AppCompatActivity {
         buttonFavorites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 当，启动 SearchActivity
                 Intent intent = new Intent(FunctionsActivity.this, FavoriteActivity.class);
                 startActivity(intent);
             }
@@ -69,7 +64,6 @@ public class FunctionsActivity extends AppCompatActivity {
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 当，启动 SearchActivity
                 Intent intent = new Intent(FunctionsActivity.this, MainActivity.class);
                 startActivity(intent);
             }
